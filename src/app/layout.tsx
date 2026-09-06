@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Great_Vibes, Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -71,6 +72,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-[#F8F5F0] text-[#2D2622] font-poppins selection:bg-[#C9A46A]/20 selection:text-[#2D2622]">
         {children}
+        <Analytics />
       </body>
     </html>
   );
