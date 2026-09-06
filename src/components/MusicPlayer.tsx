@@ -16,6 +16,7 @@ export default function MusicPlayer({ shouldAutoStart = false }: MusicPlayerProp
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const synthCtxRef = useRef<AudioContext | null>(null);
   const synthNodesRef = useRef<{ isRunning: boolean; stop: () => void } | null>(null);
+  const autoStartedRef = useRef(false);
 
   // Soft Indian classical melodic synthesis fallback (Tanpura drone + Flute arpeggiation)
   const startSyntheticMusic = useCallback(() => {
@@ -160,8 +161,11 @@ export default function MusicPlayer({ shouldAutoStart = false }: MusicPlayerProp
 
   // Listen to auto start triggered by envelope
   useEffect(() => {
-    if (shouldAutoStart && !isPlaying) {
-      togglePlay();
+    if (shouldAutoStart && !autoStartedRef.current) {
+      autoStartedRef.current = true;
+      if (!isPlaying) {
+        togglePlay();
+      }
     }
   }, [shouldAutoStart, isPlaying, togglePlay]);
 
