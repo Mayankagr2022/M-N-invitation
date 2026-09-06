@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cormorant: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-great-vibes: var(--font-great-vibes), "Great Vibes", cursive;
+  --font-poppins: var(--font-poppins), "Poppins", system-ui, sans-serif;
+
+  --color-ivory: #F8F5F0;
+  --color-ivory-light: #FCFAF7;
+  --color-ivory-dark: #EFE9DF;
+
+  --color-gold: #C9A46A;
+  --color-gold-light: #DFBE85;
+  --color-gold-dark: #A37E3E;
+  --color-gold-shimmer: #F3E5C8;
+
+  --color-sage: #A8B59A;
+  --color-sage-light: #C4D1B8;
+  --color-sage-dark: #7F8D70;
+
+  --color-rosegold: #B76E79;
+  --color-rosegold-light: #D8A48F;
+
+  --color-charcoal: #2D2622;
+  --color-charcoal-muted: #5C524A;
+}
+
+:root {
+  --background: #F8F5F0;
+  --foreground: #2D2622;
+  --gold-primary: #C9A46A;
+  --gold-accent: #DFBE85;
+  --sage-accent: #A8B59A;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F8F5F0;
+  color: #2D2622;
+}
+
+body {
+  background-color: #F8F5F0;
+  color: #2D2622;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Font Utilities */
+.font-cormorant {
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+}
+
+.font-great-vibes {
+  font-family: var(--font-great-vibes), "Great Vibes", cursive;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+/* Gold Gradient & Foil Styling */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B58742 0%, #E7C98C 40%, #C9A46A 70%, #946B2C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #C9A46A 0%, #DFBE85 50%, #B58742 100%);
+}
+
+.gold-gradient-subtle {
+  background: linear-gradient(135deg, rgba(201, 164, 106, 0.12) 0%, rgba(223, 190, 133, 0.05) 100%);
+}
+
+.gold-border {
+  border: 1px solid rgba(201, 164, 106, 0.35);
+}
+
+.gold-border-strong {
+  border: 1px solid rgba(201, 164, 106, 0.7);
+}
+
+.gold-shadow {
+  box-shadow: 0 10px 30px -10px rgba(201, 164, 106, 0.25);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(201, 164, 106, 0.35);
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(201, 164, 106, 0.28);
+  box-shadow: 0 12px 35px -10px rgba(45, 38, 34, 0.06);
+}
+
+.glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -12px rgba(201, 164, 106, 0.22);
+  border-color: rgba(201, 164, 106, 0.6);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 164, 106, 0.3);
+  box-shadow: 0 10px 30px -5px rgba(45, 38, 34, 0.12);
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(201, 164, 106, 0) 0%,
+    rgba(223, 190, 133, 0.4) 50%,
+    rgba(201, 164, 106, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* 3D Perspective for Envelope */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DFBE85;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A46A;
+}
+
+/* iOS Safe Areas */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 1rem);
+}
+
+/* ─── Scratch Card Animations ─────────────────────────────── */
+
+/* Fade-in used across modals and overlays */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Shimmer sweep hint on the gold foil before first scratch */
+@keyframes scratchHint {
+  0%   { filter: brightness(1); }
+  30%  { filter: brightness(1.18) drop-shadow(0 0 8px rgba(201,164,106,0.8)); }
+  60%  { filter: brightness(1); }
+  100% { filter: brightness(1); }
+}
+
+/* Golden glow ring that appears once the date is fully revealed */
+@keyframes revealRing {
+  0%   { opacity: 0;   transform: scale(0.9); }
+  40%  { opacity: 1;   transform: scale(1.04); }
+  70%  { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1); }
+}
+
