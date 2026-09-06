@@ -14,9 +14,8 @@ import {
 } from "@/lib/wedding-config";
 
 export default function VenueSection() {
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    VENUE_FULL_ADDRESS
-  )}`;
+  const query = encodeURIComponent(`${VENUE_FULL_ADDRESS}`);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
 
   return (
     <section id="venue" className="relative py-20 sm:py-28 px-4 max-w-6xl mx-auto">
@@ -48,6 +47,7 @@ export default function VenueSection() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 500px"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2D2622]/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
@@ -112,7 +112,7 @@ export default function VenueSection() {
             <div className="mt-6 pt-6 border-t border-[#C9A46A]/20">
               <p className="font-poppins text-xs text-[#5C524A] flex items-center gap-2 mb-4">
                 <MapPin className="w-4 h-4 text-[#C9A46A] flex-shrink-0" />
-                <span>{VENUE_FULL_ADDRESS}</span>
+                <span>{VENUE_NAME}</span>
               </p>
 
               <div className="flex flex-wrap gap-3">

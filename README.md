@@ -9,7 +9,7 @@ With immense joy and the blessings of our families, we cordially invite you to b
 ## 📅 The Wedding Day
 **Date:** 20 February 2027  
 **Time:** Baraat at 06:30 PM | Varmala & Pheras at 08:00 PM  
-**Venue:** Uchaman Udaipur Nature Valley, Udaipur, Rajasthan, India
+**Venue:** Mountain Creek Villa, Udaipur, Rajasthan, India
 
 ---
 
@@ -28,7 +28,7 @@ We have planned three days of love, laughter, and timeless joy in the beautiful 
 ---
 
 ## 📍 Destination & Hospitality
-**Uchaman Udaipur Nature Valley**  
+**Mountain Creek Villa Udaipur**  
 A timeless heritage sanctuary where royal Rajasthani architecture meets starlit romantic celebrations.
 
 For any assistance regarding travel, airport transfers, or accommodations, please reach out to our family coordinators:

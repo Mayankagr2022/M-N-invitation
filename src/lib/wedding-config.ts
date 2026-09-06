@@ -30,11 +30,11 @@ export const WEDDING_YEAR = "2027";
 export const WEDDING_CALENDAR_DATES = "20270219T143000Z/20270220T183000Z";
 
 // ─── Venue ───────────────────────────────────────────────────
-export const VENUE_NAME = "Uchaman Udaipur Nature Valley";
+export const VENUE_NAME = "Mountain Creek Villa Udaipur"
 export const VENUE_CITY = "Udaipur";
 export const VENUE_STATE = "Rajasthan";
 export const VENUE_COUNTRY = "India";
-export const VENUE_FULL_ADDRESS = `${VENUE_NAME}, ${VENUE_CITY}, ${VENUE_STATE}, ${VENUE_COUNTRY}`;
+export const VENUE_FULL_ADDRESS = `Mountain Creek Villa Udaipur`;
 /** Embed src for Google Maps iframe */
 export const VENUE_MAPS_EMBED_SRC =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.202754269171!2d73.60986647606191!3d24.58219795633445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967fbe767cea1a7%3A0x9171a1a9a7f1f865!2sMountain%20Creek%20Villa%20Udaipur!5e0!3m2!1sen!2sin!4v1788657038524!5m2!1sen!2sin";
