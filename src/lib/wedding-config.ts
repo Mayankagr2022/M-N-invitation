@@ -52,8 +52,8 @@ export const GROOM_FAMILY = {
 
 export const BRIDE_FAMILY = {
   surname: "Singhal",
-  parents: "Smt. Meena & Shri Naresh Kumar Singhal",
-  grandparents: "Smt. Sudha Devi & Shri Om Prakash Singhal",
+  parents: "Smt. Meena & Shri Shiv Kumar Singhal",
+  grandparents: "Smt. Suraj devi & Shri Govindlal Agarwal",
   message:
     "Your presence and affectionate blessings will be the greatest honour for our daughter.",
 };
@@ -64,7 +64,7 @@ export const CONTACT_GROOM_SIDE = {
   role: "Father of Groom",
   description:
     "Reach out for airport transfers, room allocations, and baraat schedule coordination.",
-  phone: "+919876543211",
+  phone: "+919414043283",
   whatsappMsg: "Hello, I have a question regarding Mayank & Nikita's wedding",
   email: `${WEDDING_EMAIL}`,
 };
@@ -74,7 +74,7 @@ export const CONTACT_BRIDE_SIDE = {
   role: "Brother of Bride",
   description:
     "Reach out for Mehendi artist bookings, attire guidance, and special guest assistance.",
-  phone: "+919876543212",
+  phone: "+916367714113",
   whatsappMsg: "Hello, I have a question regarding Mayank & Nikita's wedding",
   email: `${WEDDING_EMAIL}`,
 };
